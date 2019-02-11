@@ -1,0 +1,16 @@
+Writing a Subagent
+
+make the example daemon:
+    make example-demon
+
+execute:
+    start snmpd master daemon with config "master agentx"
+    sudo ./example-demon
+
+test get:
+    snmpget -v 2c -c public localhost NET-SNMP-TUTORIAL-MIB::nstAgentSubagentObject.0
+    (version 2, community strings: public)
+
+
+Reference:
+http://net-snmp.sourceforge.net/wiki/index.php/TUT:Writing_a_Subagent
